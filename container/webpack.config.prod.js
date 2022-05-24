@@ -7,8 +7,7 @@ const commonConfig = require("./webpack.config.common");
 const publicPath = "";
 const remote = {
     demo: "/demo",
-    another: "/another",
-    navigation: "/navigation"
+    another: "/another"
 }
 
 const prodConfig = {
@@ -32,8 +31,7 @@ const prodConfig = {
         new ModuleFederationPlugin({
             remotes: {
                 another: `another@${remote.another}/remoteEntry.js`,
-                demo: `demo@${remote.demo}/remoteEntry.js`,
-                navigation: `navigation@${remote.navigation}/remoteEntry.js`
+                demo: `demo@${remote.demo}/remoteEntry.js`
             }
         })
     ]
